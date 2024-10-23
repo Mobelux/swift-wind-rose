@@ -12,7 +12,8 @@ let package = Package(
     name: "WindRose",
     platforms: [.macOS(.v13)],
     products: [
-        .library(name: "WindRose", targets: ["WindRose"])
+        .library(name: "WindRose", targets: ["WindRose"]),
+        .library(name: "WindRoseCore", targets: ["WindRoseCore"])
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/plot.git", from: "0.9.0"),
