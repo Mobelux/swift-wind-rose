@@ -36,6 +36,12 @@ attributes:
 identifier_name:
   excluded:
     - id
+    - px
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
 
 file_length:
   warning: 500
