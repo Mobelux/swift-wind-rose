@@ -10,58 +10,144 @@ import Foundation
 import Plot
 
 public extension Component {
+    /// Assigns utilities for controlling the font family of an element.
+    ///
+    /// https://tailwindcss.com/docs/font-family
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func fontFamily(_ utilityClasses: UtilityClass<FontFamily>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the font size of an element.
+    ///
+    /// https://tailwindcss.com/docs/font-size
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func fontSize(_ utilityClasses: UtilityClass<FontSize>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the font smoothing of an element.
+    ///
+    /// https://tailwindcss.com/docs/font-smoothing
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func fontSmoothing(_ utilityClasses: UtilityClass<FontSmoothing>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the style of text.
+    ///
+    /// https://tailwindcss.com/docs/font-style
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func fontStyle(_ utilityClasses: UtilityClass<FontStyle>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the font weight of an element.
+    ///
+    /// https://tailwindcss.com/docs/font-weight
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func fontWeight(_ utilityClasses: UtilityClass<FontWeight>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the tracking (letter spacing) of an element.
+    ///
+    /// https://tailwindcss.com/docs/letter-spacing
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func letterSpacing(_ utilityClasses: UtilityClass<LetterSpacing>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the leading (line height) of an element.
+    ///
+    /// https://tailwindcss.com/docs/line-height
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func lineHeight(_ utilityClasses: UtilityClass<LineHeight>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the marker images for list items.
+    ///
+    /// https://tailwindcss.com/docs/list-style-image
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func listStyleImage(_ utilityClasses: UtilityClass<ListStyleImage>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the position of bullets/numbers in lists.
+    ///
+    /// https://tailwindcss.com/docs/list-style-position
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func listStylePosition(_ utilityClasses: UtilityClass<ListStylePosition>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the bullet/number style of a list.
+    ///
+    /// https://tailwindcss.com/docs/list-style-type
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func listStyleType(_ utilityClasses: UtilityClass<ListStyleType>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the alignment of text.
+    ///
+    /// https://tailwindcss.com/docs/text-align
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func textAlignment(_ utilityClasses: UtilityClass<TextAlignment>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the text color of an element.
+    ///
+    /// Example: `text-slate-100`
+    ///
+    /// https://tailwindcss.com/docs/text-color
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func textColor(_ utilityClasses: UtilityClass<TextColor>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the transformation of text.
+    ///
+    /// https://tailwindcss.com/docs/text-transform
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func transform(_ utilityClasses: UtilityClass<TextTransform>...) -> Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the vertical alignment of an inline or table-cell box.
+    ///
+    /// https://tailwindcss.com/docs/vertical-align
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
     func verticalAlignment(_ utilityClasses: UtilityClass<VerticalAlignment>...) -> Component {
         self.class(utilityClasses)
     }
