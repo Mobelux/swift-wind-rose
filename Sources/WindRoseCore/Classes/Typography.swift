@@ -113,32 +113,38 @@ public enum TextDecorationStyle {}
 /// Utilities for controlling the thickness of text decorations.
 ///
 /// https://tailwindcss.com/docs/text-decoration-thickness
-public enum TextDecorationThickness {}
+public enum TextDecorationThickness: NamespaceProvider {
+    public static let namespace = "decoration"
+}
 
-/// Utilities for controlling the offset of a text underline.
+/// Utilities for controlling the amount of empty space shown before text in a block.
 ///
-/// https://tailwindcss.com/docs/text-underline-offset
-public enum TextUnderlineOffset {}
-
-/// Utilities for controlling the transformation of text.
-///
-/// https://tailwindcss.com/docs/text-transform
-public enum TextTransform {}
+/// https://tailwindcss.com/docs/text-indent
+public enum TextIndent: NamespaceProvider {
+    public static let namespace = "indent"
+}
 
 /// Utilities for controlling text overflow in an element.
 ///
 /// https://tailwindcss.com/docs/text-overflow
 public enum TextOverflow {}
 
+/// Utilities for controlling the transformation of text.
+///
+/// https://tailwindcss.com/docs/text-transform
+public enum TextTransform {}
+
+/// Utilities for controlling the offset of a text underline.
+///
+/// https://tailwindcss.com/docs/text-underline-offset
+public enum TextUnderlineOffset: NamespaceProvider {
+    public static let namespace = "underline-offset"
+}
+
 /// Utilities for controlling how text wraps within an element.
 ///
 /// https://tailwindcss.com/docs/text-wrap
 public enum TextWrap {}
-
-/// Utilities for controlling the amount of empty space shown before text in a block.
-///
-/// https://tailwindcss.com/docs/text-indent
-public enum TextIndent {}
 
 /// Utilities for controlling the vertical alignment of an inline or table-cell box.
 ///
