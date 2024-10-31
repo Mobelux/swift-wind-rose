@@ -40,4 +40,18 @@ final class WindRoseTests: XCTestCase {
         <div class="hover:sm:text-black"></div>
         """)
     }
+
+    func testScalarProperties_px() {
+        let html = Div().padding(.px(10)).render()
+        expectNoDifference(html, """
+        <div class="p-[10px]"></div>
+        """)
+    }
+
+    func testScalarProperties_rem() {
+        let html = Div().padding(.rem(2)).render()
+        expectNoDifference(html, """
+        <div class="p-[2.0rem]"></div>
+        """)
+    }
 }
