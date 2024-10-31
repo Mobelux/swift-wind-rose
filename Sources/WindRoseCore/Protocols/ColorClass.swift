@@ -15,7 +15,7 @@ public protocol ColorClass: NamespaceProvider {}
 
 // swiftlint:disable file_length
 public extension UtilityClass where Property: ColorClass {
-    /// The color inherit from the parent.
+    /// The color inherited from the parent.
     static var inherit: Self {
         .init(value: "inherit")
     }
