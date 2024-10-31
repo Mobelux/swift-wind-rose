@@ -15,24 +15,37 @@ public protocol ColorClass: NamespaceProvider {}
 
 // swiftlint:disable file_length
 public extension UtilityClass where Property: ColorClass {
+    /// The color inherit from the parent.
     static var inherit: Self {
         .init(value: "inherit")
     }
 
+    /// The value of the color property of an element.
     static var current: Self {
         .init(value: "current")
     }
 
+    /// The transparent color.
     static var transparent: Self {
         .init(value: "transparent")
     }
 
+    /// The black color.
     static var black: Self {
         .init(value: "black")
     }
 
+    /// The white color.
     static var white: Self {
         .init(value: "white")
+    }
+
+    /// Returns an instance with the given hex value.
+    ///
+    /// - Parameter value: The arbitrary hex value to use.
+    /// - Returns: An instance with the given hex value.
+    static func hex(_ value: String) -> Self {
+        .arbitrary(value)
     }
 }
 

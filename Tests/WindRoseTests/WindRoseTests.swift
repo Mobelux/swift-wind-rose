@@ -54,4 +54,11 @@ final class WindRoseTests: XCTestCase {
         <div class="p-[2.0rem]"></div>
         """)
     }
+
+    func testHexColor() {
+        let html = Div().backgroundColor(.hex("#0a1a5c")).render()
+        expectNoDifference(html, """
+        <div class="bg-[#0a1a5c]"></div>
+        """)
+    }
 }
