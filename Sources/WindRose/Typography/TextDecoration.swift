@@ -13,7 +13,7 @@ import Foundation
 /// https://tailwindcss.com/docs/text-decoration
 public extension UtilityClass where Property == TextDecoration {
     /// CSS: `text-decoration-line: underline;`
-    static let underline: Self = "underlline"
+    static let underline: Self = "underline"
 
     /// CSS: `text-decoration-line: overline;`
     static let overline: Self = "overline"
