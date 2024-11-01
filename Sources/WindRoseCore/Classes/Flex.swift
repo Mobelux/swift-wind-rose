@@ -35,7 +35,7 @@ public enum FlexDirection {}
 /// Utilities for controlling gutters between grid and flexbox items.
 ///
 /// https://tailwindcss.com/docs/gap
-public enum FlexGap: NamespaceProvider {
+public enum FlexGap: ScalarProperty {
     public static let namespace = "gap"
 }
 
