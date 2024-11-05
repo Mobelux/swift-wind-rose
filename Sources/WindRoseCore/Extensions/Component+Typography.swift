@@ -10,6 +10,16 @@ import Foundation
 import Plot
 
 public extension Component {
+    /// Assigns utilities for controlling the content of the before and after pseudo-elements.
+    ///
+    /// https://tailwindcss.com/docs/content
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func content(_ utilityClasses: UtilityClass<Content>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling the font family of an element.
     ///
     /// https://tailwindcss.com/docs/font-family
@@ -60,6 +70,16 @@ public extension Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling how words should be hyphenated.
+    ///
+    /// https://tailwindcss.com/docs/hyphens
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func hyphens(_ utilityClasses: UtilityClass<Hyphens>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling the tracking (letter spacing) of an element.
     ///
     /// https://tailwindcss.com/docs/letter-spacing
@@ -67,6 +87,16 @@ public extension Component {
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
     func letterSpacing(_ utilityClasses: UtilityClass<LetterSpacing>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for clamping text to a specific number of lines.
+    ///
+    /// https://tailwindcss.com/docs/line-clamp
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func lineClamp(_ utilityClasses: UtilityClass<LineClamp>...) -> Component {
         self.class(utilityClasses)
     }
 
@@ -132,13 +162,93 @@ public extension Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the decoration of text.
+    ///
+    /// https://tailwindcss.com/docs/text-decoration
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textDecoration(_ utilityClasses: UtilityClass<TextDecoration>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the color of text decorations.
+    ///
+    /// https://tailwindcss.com/docs/text-decoration-color
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textDecorationColor(_ utilityClasses: UtilityClass<TextDecorationColor>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the style of text decorations.
+    ///
+    /// https://tailwindcss.com/docs/text-decoration-style
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textDecorationStyle(_ utilityClasses: UtilityClass<TextDecorationStyle>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the thickness of text decorations.
+    ///
+    /// https://tailwindcss.com/docs/text-decoration-thickness
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textDecorationThickness(_ utilityClasses: UtilityClass<TextDecorationThickness>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the amount of empty space shown before text in a block.
+    ///
+    /// https://tailwindcss.com/docs/text-indent
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textIndent(_ utilityClasses: UtilityClass<TextIndent>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling text overflow in an element.
+    ///
+    /// https://tailwindcss.com/docs/text-overflow
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textOverflow(_ utilityClasses: UtilityClass<TextOverflow>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling the transformation of text.
     ///
     /// https://tailwindcss.com/docs/text-transform
     ///
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
-    func transform(_ utilityClasses: UtilityClass<TextTransform>...) -> Component {
+    func textTransform(_ utilityClasses: UtilityClass<TextTransform>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the offset of a text underline.
+    ///
+    /// https://tailwindcss.com/docs/text-underline-offset
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textUnderlineOffset(_ utilityClasses: UtilityClass<TextUnderlineOffset>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling how text wraps within an element.
+    ///
+    /// https://tailwindcss.com/docs/text-wrap
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func textWrap(_ utilityClasses: UtilityClass<TextWrap>...) -> Component {
         self.class(utilityClasses)
     }
 
@@ -149,6 +259,41 @@ public extension Component {
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
     func verticalAlignment(_ utilityClasses: UtilityClass<VerticalAlignment>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling an element's white-space property.
+    ///
+    /// https://tailwindcss.com/docs/whitespace
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func whitespace(_ utilityClasses: UtilityClass<Whitespace>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling word breaks in an element.
+    ///
+    /// https://tailwindcss.com/docs/word-break
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func wordBreak(_ utilityClasses: UtilityClass<WordBreak>...) -> Component {
+        self.class(utilityClasses)
+    }
+}
+
+// MARK: - Deprecations
+
+public extension Component {
+    /// Assigns utilities for controlling the transformation of text.
+    ///
+    /// https://tailwindcss.com/docs/text-transform
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    @available(*, deprecated, renamed: "textTransform")
+    func transform(_ utilityClasses: UtilityClass<TextTransform>...) -> Component {
         self.class(utilityClasses)
     }
 }
