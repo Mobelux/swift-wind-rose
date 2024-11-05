@@ -18,12 +18,16 @@ public enum BorderColor: ColorClass {
 /// Utilities for controlling the border radius of an element.
 ///
 /// https://tailwindcss.com/docs/border-radius
-public enum BorderRadius {}
+public enum BorderRadius: ScalarProperty {
+    public static let namespace = "rounded"
+}
 
 /// Utilities for controlling the width of an element's borders.
 ///
 /// https://tailwindcss.com/docs/border-width
-public enum BorderWidth {}
+public enum BorderWidth: ScalarProperty {
+    public static let namespace = "border"
+}
 
 /// Utilities for controlling the border color between elements.
 ///
@@ -49,7 +53,9 @@ public enum OutlineColor: ColorClass {
 /// Utilities for controlling the offset of an element's outline.
 ///
 /// https://tailwindcss.com/docs/outline-offset
-public enum OutlineOffset {}
+public enum OutlineOffset: ScalarProperty {
+    public static let namespace = "outline-offset"
+}
 
 /// Utilities for controlling the style of an element's outline.
 ///
@@ -59,7 +65,9 @@ public enum OutlineStyle {}
 /// Utilities for controlling the width of an element's outline.
 ///
 /// https://tailwindcss.com/docs/outline-width
-public enum OutlineWidth {}
+public enum OutlineWidth: ScalarProperty {
+    public static let namespace = "outline"
+}
 
 /// Utilities for setting the color of outline rings.
 ///
@@ -78,9 +86,13 @@ public enum RingOffsetColor: ColorClass {
 /// Utilities for simulating an offset when adding outline rings.
 ///
 /// https://tailwindcss.com/docs/ring-offset-width
-public enum RingOffsetWidth {}
+public enum RingOffsetWidth: ScalarProperty {
+    public static let namespace = "ring-offset"
+}
 
 /// Utilities for creating outline rings with box-shadows.
 ///
 /// https://tailwindcss.com/docs/ring-width
-public enum RingWidth {}
+public enum RingWidth: ScalarProperty {
+    public static let namespace = "ring"
+}

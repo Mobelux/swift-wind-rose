@@ -40,12 +40,16 @@ public enum ScrollBehavior {}
 /// Utilities for controlling the scroll offset around items in a snap container.
 ///
 /// https://tailwindcss.com/docs/scroll-margin
-public enum ScrollMargin {}
+public enum ScrollMargin: ScalarProperty {
+    public static let namespace = "scroll-m"
+}
 
 /// Utilities for controlling an element's scroll offset within a snap container.
 ///
 /// https://tailwindcss.com/docs/scroll-padding
-public enum ScrollPadding {}
+public enum ScrollPadding: ScalarProperty {
+    public static let namespace = "scroll-p"
+}
 
 /// Utilities for controlling the scroll snap alignment of an element.
 ///

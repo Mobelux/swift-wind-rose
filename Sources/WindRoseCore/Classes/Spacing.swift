@@ -11,9 +11,13 @@ import Foundation
 /// Utilities for controlling an element's margin.
 ///
 /// https://tailwindcss.com/docs/margin
-public enum Margin {}
+public enum Margin: ScalarProperty {
+    public static let namespace = "m"
+}
 
 /// Utilities for controlling an element's padding.
 ///
 /// https://tailwindcss.com/docs/padding
-public enum Padding {}
+public enum Padding: ScalarProperty {
+    public static let namespace = "p"
+}
