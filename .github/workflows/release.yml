@@ -39,7 +39,7 @@ jobs:
 
       - name: Bump version
         id: bump
-        uses: Mobelux/bump-version-action@1
+        uses: Mobelux/bump-version-action@v1
         with:
           release-type: ${{ inputs.release_type }}
           version: ${{ steps.get_current_version.outputs.result }}
