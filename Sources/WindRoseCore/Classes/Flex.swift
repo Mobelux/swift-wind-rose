@@ -8,10 +8,20 @@
 
 import Foundation
 
+/// Utilities for controlling how rows are positioned in multi-row flex and grid containers.
+///
+/// https://tailwindcss.com/docs/align-content
+public enum ContentAlignment {}
+
 /// Utilities for controlling how flex and grid items are positioned along a container's main axis.
 ///
 /// https://tailwindcss.com/docs/justify-content
 public enum ContentJustification {}
+
+/// Utilities for controlling how content is justified and aligned at the same time.
+///
+/// https://tailwindcss.com/docs/place-content
+public enum ContentPlacement {}
 
 /// Utilities for controlling how flex items both grow and shrink.
 ///
@@ -59,6 +69,21 @@ public enum FlexShrink {}
 /// https://tailwindcss.com/docs/flex-wrap
 public enum FlexWrap {}
 
+/// Utilities for controlling the size of implicitly-created grid columns.
+///
+/// https://tailwindcss.com/docs/grid-auto-columns
+public enum GridAutoColumn {}
+
+/// Utilities for controlling how elements in a grid are auto-placed.
+///
+/// https://tailwindcss.com/docs/grid-auto-flow
+public enum GridAutoFlow {}
+
+/// Utilities for controlling the size of implicitly-created grid rows.
+///
+/// https://tailwindcss.com/docs/grid-auto-rows
+public enum GridAutoRow {}
+
 /// Utilities for controlling how elements are sized and placed across grid columns.
 ///
 /// https://tailwindcss.com/docs/grid-column
@@ -74,6 +99,11 @@ public enum GridRow {}
 /// https://tailwindcss.com/docs/grid-template-columns
 public enum GridTemplateColumn {}
 
+/// Utilities for specifying the rows in a grid layout.
+///
+/// https://tailwindcss.com/docs/grid-template-rows
+public enum GridTemplateRow {}
+
 /// Utilities for controlling how flex and grid items are positioned along a container's cross axis.
 ///
 /// https://tailwindcss.com/docs/align-items
@@ -83,3 +113,13 @@ public enum ItemAlignment {}
 ///
 /// https://tailwindcss.com/docs/justify-items
 public enum ItemJustification {}
+
+/// Utilities for controlling how items are justified and aligned at the same time.
+///
+/// https://tailwindcss.com/docs/place-items
+public enum ItemPlacement {}
+
+/// Utilities for controlling how an individual item is justified and aligned at the same time.
+///
+/// https://tailwindcss.com/docs/place-self
+public enum SelfPlacement {}
