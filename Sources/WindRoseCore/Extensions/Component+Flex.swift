@@ -10,6 +10,17 @@ import Foundation
 import Plot
 
 public extension Component {
+    /// Assigns utilities for controlling how rows are positioned in multi-row flex and grid
+    /// containers.
+    ///
+    /// https://tailwindcss.com/docs/align-content
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func contentAlignment(_ utilityClasses: UtilityClass<ContentAlignment>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling how flex and grid items are positioned along a container's
     /// main axis.
     ///
@@ -18,6 +29,16 @@ public extension Component {
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
     func contentJustification(_ utilityClasses: UtilityClass<ContentJustification>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling how content is justified and aligned at the same time.
+    ///
+    /// https://tailwindcss.com/docs/place-content
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func contentPlacement(_ utilityClasses: UtilityClass<ContentPlacement>...) -> Component {
         self.class(utilityClasses)
     }
 
@@ -101,6 +122,36 @@ public extension Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the size of implicitly-created grid columns.
+    ///
+    /// https://tailwindcss.com/docs/grid-auto-columns
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func gridAutoColumn(_ utilityClasses: UtilityClass<GridAutoColumn>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling how elements in a grid are auto-placed.
+    ///
+    /// https://tailwindcss.com/docs/grid-auto-flow
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func gridAutoFlow(_ utilityClasses: UtilityClass<GridAutoFlow>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the size of implicitly-created grid rows.
+    ///
+    /// https://tailwindcss.com/docs/grid-auto-rows
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func gridAutoRow(_ utilityClasses: UtilityClass<GridAutoRow>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling how elements are sized and placed across grid columns.
     ///
     /// https://tailwindcss.com/docs/grid-column
@@ -131,6 +182,16 @@ public extension Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for specifying the rows in a grid layout.
+    ///
+    /// https://tailwindcss.com/docs/grid-template-rows
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func gridTemplateRow(_ utilityClasses: UtilityClass<GridTemplateRow>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling how flex and grid items are positioned along a container's
     /// cross axis.
     ///
@@ -149,6 +210,26 @@ public extension Component {
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
     func itemJustification(_ utilityClasses: UtilityClass<ItemJustification>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling how items are justified and aligned at the same time.
+    ///
+    /// https://tailwindcss.com/docs/place-items
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func itemPlacement(_ utilityClasses: UtilityClass<ContentPlacement>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling how an individual item is justified and aligned at the same time.
+    ///
+    /// https://tailwindcss.com/docs/place-self
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func selfPlacement(_ utilityClasses: UtilityClass<SelfPlacement>...) -> Component {
         self.class(utilityClasses)
     }
 }
