@@ -30,6 +30,16 @@ public extension Component {
         self.class(utilityClasses)
     }
 
+    /// Assigns utilities for controlling the style of an element's borders.
+    ///
+    /// https://tailwindcss.com/docs/border-style
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func borderStyle(_ utilityClasses: UtilityClass<BorderStyle>...) -> Component {
+        self.class(utilityClasses)
+    }
+
     /// Assigns utilities for controlling the width of an element's borders.
     ///
     /// https://tailwindcss.com/docs/border-width
@@ -57,6 +67,16 @@ public extension Component {
     /// - Parameter utilityClasses: The utility classes to apply.
     /// - Returns: A component with the specified utility classes.
     func divideStyle(_ utilityClasses: UtilityClass<DivideStyle>...) -> Component {
+        self.class(utilityClasses)
+    }
+
+    /// Assigns utilities for controlling the border width between elements.
+    ///
+    /// https://tailwindcss.com/docs/divide-width
+    ///
+    /// - Parameter utilityClasses: The utility classes to apply.
+    /// - Returns: A component with the specified utility classes.
+    func divideWidth(_ utilityClasses: UtilityClass<DivideWidth>...) -> Component {
         self.class(utilityClasses)
     }
 
