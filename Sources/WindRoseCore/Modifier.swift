@@ -192,7 +192,7 @@ public extension Modifier {
     /// CSS: `&:last-of-type`
     static let lastOfType: Self = "last-of-type"
 
-    /// CSS: [`dir="rtl"] &`
+    /// CSS: `[dir="rtl"] &`
     static let ltr: Self = "ltr"
 
     /// CSS: `&::marker`
