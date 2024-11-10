@@ -21,38 +21,44 @@ public struct Modifier: Equatable, Sendable {
     }
 }
 
+extension Modifier: ExpressibleByStringLiteral {
+    public init(stringLiteral name: String) {
+        self.name = name
+    }
+}
+
 // MARK: - Breakpoints
 
 public extension Modifier {
     /// CSS: `@media (min-width: 640px)`
-    static let sm = Modifier("sm")
+    static let sm: Self = "sm"
 
     /// CSS: `@media (min-width: 768px)`
-    static let md = Modifier("md")
+    static let md: Self = "md"
 
     /// CSS: `@media (min-width: 1024px)`
-    static let lg = Modifier("lg")
+    static let lg: Self = "lg"
 
     /// CSS: `@media (min-width: 1280px)`
-    static let xl = Modifier("xl")
+    static let xl: Self = "xl"
 
     /// CSS: `@media (min-width: 1536px)`
-    static let xl2 = Modifier("2xl")
+    static let xl2: Self = "2xl"
 
     /// CSS: `@media not all and (min-width: 640px)`
-    static let maxSm = Modifier("max-sm")
+    static let maxSm: Self = "max-sm"
 
     /// CSS: `@media not all and (min-width: 768px)`
-    static let maxMd = Modifier("max-md")
+    static let maxMd: Self = "max-md"
 
     /// CSS: `@media not all and (min-width: 1024px)`
-    static let maxLg = Modifier("max-lg")
+    static let maxLg: Self = "max-lg"
 
     /// CSS: `@media not all and (min-width: 1280px)`
-    static let maxXl = Modifier("max-xl")
+    static let maxXl: Self = "max-xl"
 
     /// CSS: `@media not all and (min-width: 1536px)`
-    static let maxXl2 = Modifier("max-2xl")
+    static let maxXl2: Self = "max-2xl"
 
     /// Returns a modifier targeting the given arbitrary breakpoint.
     ///
@@ -73,178 +79,178 @@ public extension Modifier {
 
 public extension Modifier {
     /// CSS: `&:active`
-    static let active = Modifier("active")
+    static let active: Self = "active"
 
     /// CSS: `&::after`
-    static let after = Modifier("after")
+    static let after: Self = "after"
 
     /// CSS: `&[aria-checked="true"]`
-    static let ariaChecked = Modifier("aria-checked")
+    static let ariaChecked: Self = "aria-checked"
 
     /// CSS: `&[aria-disabled="true"]`
-    static let ariaDisabled = Modifier("aria-disabled")
+    static let ariaDisabled: Self = "aria-disabled"
 
     /// CSS: `&[aria-expanded="true"]`
-    static let ariaExpanded = Modifier("aria-expanded")
+    static let ariaExpanded: Self = "aria-expanded"
 
     /// CSS: `&[aria-hidden="true"]`
-    static let ariaHidden = Modifier("aria-hidden")
+    static let ariaHidden: Self = "aria-hidden"
 
     /// CSS: `&[aria-pressed="true"]`
-    static let ariaPressed = Modifier("aria-pressed")
+    static let ariaPressed: Self = "aria-pressed"
 
     /// CSS: `&[aria-readonly="true"]`
-    static let ariaReadonly = Modifier("aria-readonly")
+    static let ariaReadonly: Self = "aria-readonly"
 
     /// CSS: `&[aria-required="true"]`
-    static let ariaRequired = Modifier("aria-required")
+    static let ariaRequired: Self = "aria-required"
 
     /// CSS: `&[aria-selected="true"]`
-    static let ariaSelected = Modifier("aria-selected")
+    static let ariaSelected: Self = "aria-selected"
 
     /// CSS: `&:autofill`
-    static let autofill = Modifier("autofill")
+    static let autofill: Self = "autofill"
 
     /// CSS: `&::backdrop`
-    static let backdrop = Modifier("backdrop")
+    static let backdrop: Self = "backdrop"
 
     /// CSS: `&::before`
-    static let before = Modifier("before")
+    static let before: Self = "before"
 
     /// CSS: `&:checked`
-    static let checked = Modifier("checked")
+    static let checked: Self = "checked"
 
     /// CSS: `@media (prefers-contrast: less)`
-    static let contrastLess = Modifier("contrast-less")
+    static let contrastLess: Self = "contrast-less"
 
     /// CSS: `@media (prefers-contrast: more)`
-    static let contrastMore = Modifier("contrast-more")
+    static let contrastMore: Self = "contrast-more"
 
     /// CSS: `@media (prefers-color-scheme: dark)`
-    static let dark = Modifier("dark")
+    static let dark: Self = "dark"
 
     /// CSS: `&:default`
-    static let `default` = Modifier("default")
+    static let `default`: Self = "default"
 
     /// CSS: `&:disabled`
-    static let disabled = Modifier("disabled")
+    static let disabled: Self = "disabled"
 
     /// CSS: `&:empty`
-    static let empty = Modifier("empty")
+    static let empty: Self = "empty"
 
     /// CSS: `&:enabled`
-    static let enabled = Modifier("enabled")
+    static let enabled: Self = "enabled"
 
     /// CSS: `&:nth-child(even)`
-    static let even = Modifier("even")
+    static let even: Self = "even"
 
     /// CSS: `&::file-selector-button`
-    static let file = Modifier("file")
+    static let file: Self = "file"
 
     /// CSS: `&:first-child`
-    static let first = Modifier("first")
+    static let first: Self = "first"
 
     /// CSS: `&::first-letter`
-    static let firstLetter = Modifier("first-letter")
+    static let firstLetter: Self = "first-letter"
 
     /// CSS: `&::first-line`
-    static let firstLine = Modifier("first-line")
+    static let firstLine: Self = "first-line"
 
     /// CSS: `&:first-of-type`
-    static let firstOfType = Modifier("first-of-type")
+    static let firstOfType: Self = "first-of-type"
 
     /// CSS: `&:focus`
-    static let focus = Modifier("focus")
+    static let focus: Self = "focus"
 
     /// CSS: `&:focus-visible`
-    static let focusVisible = Modifier("focus-visible")
+    static let focusVisible: Self = "focus-visible"
 
     /// CSS: `&:focus-within`
-    static let focusWithin = Modifier("focus-within")
+    static let focusWithin: Self = "focus-within"
 
     /// CSS: `&:has`
-    static let has = Modifier("has")
+    static let has: Self = "has"
 
     /// CSS: `&:hover`
-    static let hover = Modifier("hover")
+    static let hover: Self = "hover"
 
     /// CSS: `&:in-range`
-    static let inRange = Modifier("in-range")
+    static let inRange: Self = "in-range"
 
     /// CSS: `&:indeterminate`
-    static let indeterminate = Modifier("indeterminate")
+    static let indeterminate: Self = "indeterminate"
 
     /// CSS: `&:invalid`
-    static let invalid = Modifier("invalid")
+    static let invalid: Self = "invalid"
 
     /// CSS: `@media (orientation: landscape)`
-    static let landscape = Modifier("landscape")
+    static let landscape: Self = "landscape"
 
     /// CSS: `&:last-child`
-    static let last = Modifier("last")
+    static let last: Self = "last"
 
     /// CSS: `&:last-of-type`
-    static let lastOfType = Modifier("last-of-type")
+    static let lastOfType: Self = "last-of-type"
 
     /// CSS: [`dir="rtl"] &`
-    static let ltr = Modifier("ltr")
+    static let ltr: Self = "ltr"
 
     /// CSS: `&::marker`
-    static let marker = Modifier("marker")
+    static let marker: Self = "marker"
 
     /// CSS: `@media (prefers-reduced-motion: reduce)`
-    static let motionReduce = Modifier("motion-reduce")
+    static let motionReduce: Self = "motion-reduce"
 
     /// CSS: `@media (prefers-reduced-motion: no-preference)`
-    static let motionSafe = Modifier("motion-safe")
+    static let motionSafe: Self = "motion-safe"
 
     /// CSS: `&:nth-child(odd)`
-    static let odd = Modifier("odd")
+    static let odd: Self = "odd"
 
     /// CSS: `&:only-child`
-    static let only = Modifier("only")
+    static let only: Self = "only"
 
     /// CSS: `&:only-of-type`
-    static let onlyOfType = Modifier("only-of-type")
+    static let onlyOfType: Self = "only-of-type"
 
     /// CSS: `&[open]`
-    static let open = Modifier("open")
+    static let open: Self = "open"
 
     /// CSS: `&:out-of-range`
-    static let outOfRange = Modifier("out-of-range")
+    static let outOfRange: Self = "out-of-range"
 
     /// CSS: `&::placeholder`
-    static let placeholder = Modifier("placeholder")
+    static let placeholder: Self = "placeholder"
 
     /// CSS: `&:placeholder-shown`
-    static let placeholderShown = Modifier("placeholder-shown")
+    static let placeholderShown: Self = "placeholder-shown"
 
     /// CSS: `@media (orientation: portrait)`
-    static let portrait = Modifier("portrait")
+    static let portrait: Self = "portrait"
 
     /// CSS: `@media print`
-    static let print = Modifier("print")
+    static let print: Self = "print"
 
     /// CSS: `&:read-only`
-    static let readOnly = Modifier("read-only")
+    static let readOnly: Self = "read-only"
 
     /// CSS: `&:required`
-    static let required = Modifier("required")
+    static let required: Self = "required"
 
     /// CSS: [`dir="rtl"] &`
-    static let rtl = Modifier("rtl")
+    static let rtl: Self = "rtl"
 
     /// CSS: `&::selection`
-    static let selection = Modifier("selection")
+    static let selection: Self = "selection"
 
     /// CSS: `&:target`
-    static let target = Modifier("target")
+    static let target: Self = "target"
 
     /// CSS: `&:valid`
-    static let valid = Modifier("valid")
+    static let valid: Self = "valid"
 
     /// CSS: `&:visited`
-    static let visited = Modifier("visited")
+    static let visited: Self = "visited"
 
     /// Returns a modifier targeting the given ARIA attribute.
     ///
