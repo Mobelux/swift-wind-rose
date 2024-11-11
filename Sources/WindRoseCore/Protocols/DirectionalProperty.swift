@@ -9,7 +9,7 @@
 import Foundation
 
 /// A class of types that represent a string value.
-public protocol SimpleValue: Equatable, Sendable, ExpressibleByStringLiteral {
+public protocol SimpleValue: Equatable, ExpressibleByStringLiteral, Sendable {
     /// The corresponding value.
     var value: String { get }
 
@@ -19,8 +19,8 @@ public protocol SimpleValue: Equatable, Sendable, ExpressibleByStringLiteral {
     init(_ value: String)
 }
 
-extension SimpleValue {
-    public init(stringLiteral value: String) {
+public extension SimpleValue {
+    init(stringLiteral value: String) {
         self.init(value)
     }
 }
