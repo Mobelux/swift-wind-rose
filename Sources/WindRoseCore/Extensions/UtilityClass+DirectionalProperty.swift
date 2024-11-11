@@ -19,7 +19,7 @@ extension UtilityClass where Property: DirectionalProperty {
 
 // MARK: - Directional Units
 
-extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection {
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection {
     /// Returns a utility class with the given unit applied to the top edge.
     ///
     /// - Parameter unit: The unit to apply.
@@ -53,7 +53,7 @@ extension UtilityClass where Property: DirectionalProperty, Property.Direction: 
     }
 }
 
-extension UtilityClass where Property: DirectionalProperty, Property.Direction: AxialDirection {
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: AxialDirection {
     /// Returns a utility class with the given unit applied to the horizontal axis.
     ///
     /// - Parameter unit: The unit to apply.
