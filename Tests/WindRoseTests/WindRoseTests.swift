@@ -61,4 +61,18 @@ final class WindRoseTests: XCTestCase {
         <div class="bg-[#0a1a5c]"></div>
         """)
     }
+
+    func testDirectionalProperty_arbitrary() {
+        let html = Div().margin(.horizontal(px: 16)).render()
+        expectNoDifference(html, """
+        <div class="mx-[16.0px]"></div>
+        """)
+    }
+
+    func testDirectionalProperty_scale() {
+        let html = Div().padding(.top("0.5")).render()
+        expectNoDifference(html, """
+        <div class="pt-0.5"></div>
+        """)
+    }
 }
