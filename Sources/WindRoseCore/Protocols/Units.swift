@@ -51,3 +51,20 @@ public extension RelativeLength {
         .init("[\(value)rem]")
     }
 }
+
+// MARK: - Arbitrary: Container Relative
+
+/// A class of types representing lengths relative to a parent element.
+public protocol ContainerRelative: UnitProtocol {
+    /// Returns a unit specifying the given value as a percentage.
+    ///
+    /// - Parameter value: The value as a percentage.
+    /// - Returns: A new instance with the specified value as a percentage.
+    static func percent(_ value: Double) -> Self
+}
+
+public extension ContainerRelative {
+    static func percent(_ value: Double) -> Self {
+        .init("[\(value)%]")
+    }
+}

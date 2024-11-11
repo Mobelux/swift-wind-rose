@@ -280,3 +280,67 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
         .vertical(.rem(rem))
     }
 }
+
+// MARK: - Arbitrary: Container Relative
+
+public extension UtilityClass where Property: DirectionalProperty, Property.Unit: ContainerRelative {
+    /// Returns a utility with an arbitrary value expressed as a percentage applied to all directions.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to all directions.
+    static func all(percent: Double) -> Self {
+        .init(DirectionalUnitOf<Property>(unit: .percent(percent)))
+    }
+}
+
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection, Property.Unit: ContainerRelative {
+    /// Returns a utility class with an arbitrary value as a percentage applied to the top edge.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the top edge.
+    static func top(percent: Double) -> Self {
+        .top(.percent(percent))
+    }
+
+    /// Returns a utility class with an arbitrary value as a percentage applied to the right edge.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the right edge.
+    static func right(percent: Double) -> Self {
+        .right(.percent(percent))
+    }
+
+    /// Returns a utility class with an arbitrary value as a percentage applied to the bottom edge.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the bottom edge.
+    static func bottom(percent: Double) -> Self {
+        .bottom(.percent(percent))
+    }
+
+    /// Returns a utility class with an arbitrary value as a percentage applied to the left edge.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the left edge.
+    static func left(percent: Double) -> Self {
+        .left(.percent(percent))
+    }
+}
+
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: AxialDirection, Property.Unit: ContainerRelative {
+    /// Returns a utility class with an arbitrary value as a percentage applied along the horizontal axis.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the horizontal axis.
+    static func horizontal(percent: Double) -> Self {
+        .horizontal(.percent(percent))
+    }
+
+    /// Returns a utility class with an arbitrary value as a percentage applied along the vertical axis.
+    ///
+    /// - Parameter percent: The value as a percentage.
+    /// - Returns: A utility class with the given value applied to the vertical axis.
+    static func vertical(percent: Double) -> Self {
+        .vertical(.percent(percent))
+    }
+}
