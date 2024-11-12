@@ -8,6 +8,7 @@
 
 import Foundation
 import Plot
+import WindRoseCore
 
 public extension Component {
     /// Assigns utilities for controlling how rows are positioned in multi-row flex and grid

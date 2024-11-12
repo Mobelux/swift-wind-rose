@@ -8,6 +8,7 @@
 
 import Foundation
 import Plot
+import WindRoseCore
 
 public extension Component {
     /// Assigns utilities for suppressing native form control styling.

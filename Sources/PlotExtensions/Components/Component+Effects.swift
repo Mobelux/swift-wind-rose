@@ -8,6 +8,7 @@
 
 import Foundation
 import Plot
+import WindRoseCore
 
 public extension Component {
     /// Assigns utilities for controlling how an element's background image should blend with its

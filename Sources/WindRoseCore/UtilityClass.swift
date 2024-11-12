@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Plot
 
 /// A representation of a Tailwind utility class.
 public struct UtilityClass<Property>: Equatable, Sendable {
@@ -65,23 +64,8 @@ extension UtilityClass {
 ///
 /// - Parameter classes: The classes to combine.
 /// - Returns: The combined class names.
-func className<Property>(_ classes: [UtilityClass<Property>]) -> String {
+public func className<Property>(_ classes: [UtilityClass<Property>]) -> String {
     classes.reduce(into: "", { result, utilityClass in
         result += (result.isEmpty ? utilityClass.className : " \(utilityClass.className)")
     })
-}
-
-// MARK: - Plot
-
-public extension Component {
-    /// Assigns a collection of utility class names to this component's element.
-    ///
-    /// - Parameter utilityClasses: The utility classes to assign.
-    /// - Returns: The modified component.
-    func `class`<Property>(_ utilityClasses: [UtilityClass<Property>]) -> Component {
-        attribute(
-            named: "class",
-            value: className(utilityClasses),
-            replaceExisting: false)
-    }
 }

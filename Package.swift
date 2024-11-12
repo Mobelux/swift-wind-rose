@@ -21,17 +21,23 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "PlotExtensions",
+            dependencies: [
+                "WindRoseCore",
+                .product(name: "Plot", package: "plot")
+            ],
+            swiftSettings: swiftSettings
+        ),
+        .target(
             name: "WindRose",
             dependencies: [
+                "PlotExtensions",
                 "WindRoseCore"
             ],
             swiftSettings: swiftSettings
         ),
         .target(
             name: "WindRoseCore",
-            dependencies: [
-                .product(name: "Plot", package: "plot")
-            ],
             swiftSettings: swiftSettings
         ),
         .testTarget(
