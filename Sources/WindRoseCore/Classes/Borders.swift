@@ -22,6 +22,11 @@ public enum BorderRadius: ScalarProperty {
     public static let namespace = "rounded"
 }
 
+/// Utilities for controlling the style of an element's borders.
+///
+/// https://tailwindcss.com/docs/border-style
+public enum BorderStyle {}
+
 /// Utilities for controlling the width of an element's borders.
 ///
 /// https://tailwindcss.com/docs/border-width
@@ -42,6 +47,11 @@ public enum DivideColor: ColorClass {
 ///
 /// https://tailwindcss.com/docs/divide-style
 public enum DivideStyle {}
+
+/// Utilities for controlling the border width between elements.
+///
+/// https://tailwindcss.com/docs/divide-width
+public enum DivideWidth {}
 
 /// Utilities for controlling the color of an element's outline.
 ///
