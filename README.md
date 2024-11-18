@@ -65,7 +65,7 @@ Various protocols like [`ColorClass`](Sources/WindRoseCore/Protocols/ColorClass.
 
 ### Modifiers
 
-Tailwind's [variant modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states) are supported via corresponding `UtilityClass` methods that add a `Modifier`s to a given instance: 
+Tailwind's [variant modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states) are supported via corresponding `UtilityClass` methods that add a `Modifier` to a given instance: 
 
 ```swift
 public struct Modifier {
