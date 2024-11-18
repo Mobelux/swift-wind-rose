@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - Breakpoint Modifiers
+// swiftlint:disable file_length
 public extension UtilityClass {
     /// Default: 640px
     ///
@@ -662,3 +663,4 @@ public extension UtilityClass {
         modifying(utilityClass, with: .visited)
     }
 }
+// swiftlint:enable file_length
