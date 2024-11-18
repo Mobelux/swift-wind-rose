@@ -27,7 +27,7 @@ targets: [
 
 ## Design
 
-The core of the library is a simple `UtilityClass` struct that is generic over a phantom `Property` type. It has a `name` and a collection of `Modifier`s representing Tailwind's [variant modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states).
+The core of the library is a simple `UtilityClass` struct that is generic over a phantom `Property` type. It has a `name` and a collection of `Modifier`s representing Tailwind's variant modifiers.
 
 ```swift
 public struct Modifier {
@@ -60,7 +60,7 @@ public extension UtilityClass where Property == Display {
 }
 ```
 
-Various protocols like [`ColorClass`](Sources/WindRoseCore/Protocols/ColorClass.swift) are used to generalize class this, though there remains significant room for improvement. WindRose does not yet support [custom Tailwind configurations](https://tailwindcss.com/docs/configuration).
+Various protocols like [`ColorClass`](Sources/WindRoseCore/Protocols/ColorClass.swift) are used to generalize utility class declarations, though there remains significant room for improvement. WindRose does not yet support [custom Tailwind configurations](https://tailwindcss.com/docs/configuration).
 
 
 ### Modifiers
@@ -75,10 +75,11 @@ public struct Modifier {
 extension Modifier {
     /// CSS: `&:hover`
     static let hover = Modifier("hover")
+    
+    ...
 }
 
 extension UtilityClass {
-    /// Returns a new utility class with the given modifier.
     static func modifying(_ utilityClass: Self, with modifier: Modifier) -> Self {
         UtilityClass(
             utilityClass.name,
@@ -90,10 +91,12 @@ public extension UtilityClass {
     static func hover(_ utilityClass: UtilityClass) -> Self {
         modifying(utilityClass, with: .hover)
     }
+    
+    ...
 }
 ```
 
-As in Tailwind, modifiers can be stacked to target more specific situations, for example changing the background color in dark mode, at the medium breakpoint, on hover:
+As in Tailwind, modifiers can be stacked to target more specific situations. For example, to change the background color in dark mode, at the medium breakpoint, on hover:
 
 ```swift
 let stacked: UtilityClass<BackgroundColor> = .dark(.md(.hover(.fuchsia600)))
@@ -103,7 +106,7 @@ stacked.classname // "dark:md:hover:bg-fuchsia-600"
 
 ## ⚙️ Usage
 
-WindRose is designed to be used with a one of the [many](https://github.com/BinaryBirds/swift-html) [HTML](https://github.com/tayloraswift/swift-dom) [DSLs](https://github.com/pointfreeco/swift-html) available for Swift and is not particularly useful outside of additional library-specific support. The [Plot](https://github.com/JohnSundell/Plot) library, for example, defines a `Component` protocol that can be used as follows:
+WindRose is designed to be used with a one of the [many](https://github.com/BinaryBirds/swift-html) [HTML](https://github.com/tayloraswift/swift-dom) [DSLs](https://github.com/pointfreeco/swift-html) available for Swift and is not particularly useful outside of additional, library-specific support. The [Plot](https://github.com/JohnSundell/Plot) library, for example, defines a `Component` protocol that can be used as follows:
 
 ```swift
 struct Banner: Component {
@@ -120,7 +123,7 @@ struct Banner: Component {
 }
 ```
 
-Given additional extensions on that protocol to provide support for each property:
+Given additional extensions on that protocol to provide support for each property
 
 ```swift
 public extension Component {
