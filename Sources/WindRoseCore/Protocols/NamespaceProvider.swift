@@ -34,13 +34,13 @@ public extension UtilityClass where Property: NamespaceProvider {
         UtilityClass("\(Property.namespace)-[\(value)]")
     }
 
-    /// Returns an instance with an arbitrary value determined by passing the given value to the
-    /// `calc()` function.
+    /// Returns an instance with an arbitrary value determined by passing the given expression to
+    /// the `calc()` function.
     ///
-    /// - Parameter value: The parameter passed to the `calc()` function.
-    /// - Returns: An instance with an arbitrary value that is calculated using the `calc()`
+    /// - Parameter expression: The expression passed to the `calc()` function.
+    /// - Returns: An instance with an arbitrary value that is calculated using the `calc()`.
     /// function.
-    static func calc(_ value: String) -> Self {
-        .arbitrary("calc(\(value.replacingOccurrences(of: " ", with: "_")))")
+    static func calc(_ expression: String) -> Self {
+        .arbitrary("calc(\(expression.replacingOccurrences(of: " ", with: "_")))")
     }
 }
