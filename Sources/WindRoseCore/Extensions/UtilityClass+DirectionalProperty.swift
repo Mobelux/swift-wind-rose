@@ -156,7 +156,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
 // MARK: - Arbitrary: Absolute Lengths
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Unit: AbsoluteLength {
-    /// Returns a utility with an arbitrary value expressed in pixels applied to all directions.
+    /// Returns a utility class with an arbitrary value expressed in pixels applied to all directions.
     ///
     /// - Parameter px: The value in pixels.
     /// - Returns: A utility class with the given value applied to all directions.
@@ -220,7 +220,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
 // MARK: - Arbitrary: Relative Lengths
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Unit: RelativeLength {
-    /// Returns a utility with an arbitrary value expressed in rems applied to all directions.
+    /// Returns a utility class with an arbitrary value expressed in rems applied to all directions.
     ///
     /// - Parameter rem: The value in rems.
     /// - Returns: A utility class with the given value applied to all directions.
@@ -284,7 +284,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
 // MARK: - Arbitrary: Container Relative
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Unit: ContainerRelative {
-    /// Returns a utility with an arbitrary value expressed as a percentage applied to all directions.
+    /// Returns a utility class with an arbitrary value expressed as a percentage applied to all directions.
     ///
     /// - Parameter percent: The value as a percentage.
     /// - Returns: A utility class with the given value applied to all directions.
