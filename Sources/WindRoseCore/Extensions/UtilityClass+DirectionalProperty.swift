@@ -153,6 +153,77 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
     }
 }
 
+// MARK: - Arbitrary: `calc()` Function
+
+public extension UtilityClass where Property: DirectionalProperty {
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied to all directions.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the top edge.
+    static func all(calc expression: String) -> Self {
+        .init(DirectionalUnit(unit: .calc(expression)))
+    }
+}
+
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection {
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied to the top edge.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the top edge.
+    static func top(calc expression: String) -> Self {
+        .top(.calc(expression))
+    }
+
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied to the right edge.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the right edge.
+    static func right(calc expression: String) -> Self {
+        .right(.calc(expression))
+    }
+
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied to the bottom edge.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the bottom edge.
+    static func bottom(calc expression: String) -> Self {
+        .bottom(.calc(expression))
+    }
+
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied to the left edge.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the left edge.
+    static func left(calc expression: String) -> Self {
+        .left(.calc(expression))
+    }
+}
+
+public extension UtilityClass where Property: DirectionalProperty, Property.Direction: AxialDirection {
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied along the horizontal axis.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the horizontal axis.
+    static func horizontal(calc expression: String) -> Self {
+        .horizontal(.calc(expression))
+    }
+
+    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// applied along the vertical axis.
+    ///
+    /// - Parameter expression: The expression to pass to the `calc()` function.
+    /// - Returns: A utility class with the given value applied to the vertical axis.
+    static func vertical(calc expression: String) -> Self {
+        .vertical(.calc(expression))
+    }
+}
+
 // MARK: - Arbitrary: Absolute Lengths
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Unit: AbsoluteLength {

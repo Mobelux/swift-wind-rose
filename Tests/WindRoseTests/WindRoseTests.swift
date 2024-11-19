@@ -83,6 +83,13 @@ final class WindRoseTests: XCTestCase {
         """)
     }
 
+    func testDirectionalProperty_calc() {
+        let html = Div().margin(.horizontal(calc: "3rem * 2")).render()
+        expectNoDifference(html, """
+        <div class="mx-[calc(3rem_*_2)]"></div>
+        """)
+    }
+
     func testDirectionalProperty_scale() {
         let html = Div().padding(.top("0.5")).render()
         expectNoDifference(html, """
