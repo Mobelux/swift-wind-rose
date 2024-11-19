@@ -156,7 +156,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
 // MARK: - Arbitrary: `calc()` Function
 
 public extension UtilityClass where Property: DirectionalProperty {
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied to all directions.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -167,7 +167,7 @@ public extension UtilityClass where Property: DirectionalProperty {
 }
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection {
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied to the top edge.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -176,7 +176,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
         .top(.calc(expression))
     }
 
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied to the right edge.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -185,7 +185,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
         .right(.calc(expression))
     }
 
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied to the bottom edge.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -194,7 +194,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
         .bottom(.calc(expression))
     }
 
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied to the left edge.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -205,7 +205,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
 }
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Direction: AxialDirection {
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied along the horizontal axis.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
@@ -214,7 +214,7 @@ public extension UtilityClass where Property: DirectionalProperty, Property.Dire
         .horizontal(.calc(expression))
     }
 
-    /// Returns a utility class with an arbitrary value calculating the given expression that is
+    /// Returns a utility class with an arbitrary value that calculates the given expression and is
     /// applied along the vertical axis.
     ///
     /// - Parameter expression: The expression to pass to the `calc()` function.
