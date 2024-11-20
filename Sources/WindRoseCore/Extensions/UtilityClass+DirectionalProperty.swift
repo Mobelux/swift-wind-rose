@@ -17,6 +17,16 @@ extension UtilityClass where Property: DirectionalProperty {
     }
 }
 
+public extension UtilityClass where Property: DirectionalProperty {
+    /// Returns a utility class with the given unit applied to all directions.
+    ///
+    /// - Parameter unit: The unit to apply.
+    /// - Returns: A utility class with the given unit applied to all directions.
+    static func all(_ unit: Property.Unit) -> Self {
+        .init(DirectionalUnit(unit: unit))
+    }
+}
+
 // MARK: - Directional Units
 
 public extension UtilityClass where Property: DirectionalProperty, Property.Direction: EdgeDirection {
