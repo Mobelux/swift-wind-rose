@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UtilityClass where Property: DirectionalProperty {
+public extension UtilityClass where Property: DirectionalProperty {
     /// Creates an instance.
     ///
     /// - Parameter directionalUnit: The direction and unit of the property.
