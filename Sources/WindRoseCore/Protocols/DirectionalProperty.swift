@@ -31,6 +31,18 @@ public protocol DirectionProtocol: SimpleValue {}
 /// A class of types expressing the unit of a ``DirectionalProperty``.
 public protocol UnitProtocol: SimpleValue {}
 
+public extension UnitProtocol {
+    /// Returns an instance with an arbitrary value determined by passing the given expression to
+    /// the `calc()` function.
+    ///
+    /// - Parameter expression: The expression passed to the `calc()` function.
+    /// - Returns: An instance with an arbitrary value that is calculated using the `calc()`
+    /// function.
+    static func calc(_ expression: String) -> Self {
+        .init("[calc(\(expression.replacingOccurrences(of: " ", with: "_")))]")
+    }
+}
+
 /// A class of properties that may be described by a direction and a unit.
 public protocol DirectionalProperty<Direction, Unit>: ScalarProperty {
     /// The kind of value that represents the direction of the property.

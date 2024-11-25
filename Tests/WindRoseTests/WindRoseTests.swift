@@ -55,6 +55,20 @@ final class WindRoseTests: XCTestCase {
         """)
     }
 
+    func testArbitraryValue() {
+        let html = Div().padding(.arbitrary("4px")).render()
+        expectNoDifference(html, """
+        <div class="p-[4px]"></div>
+        """)
+    }
+
+    func testArbitraryValue_calc() {
+        let html = Div().padding(.calc("3rem * 2")).render()
+        expectNoDifference(html, """
+        <div class="p-[calc(3rem_*_2)]"></div>
+        """)
+    }
+
     func testHexColor() {
         let html = Div().backgroundColor(.hex("#0a1a5c")).render()
         expectNoDifference(html, """
@@ -66,6 +80,13 @@ final class WindRoseTests: XCTestCase {
         let html = Div().margin(.horizontal(px: 16)).render()
         expectNoDifference(html, """
         <div class="mx-[16.0px]"></div>
+        """)
+    }
+
+    func testDirectionalProperty_calc() {
+        let html = Div().margin(.horizontal(calc: "3rem * 2")).render()
+        expectNoDifference(html, """
+        <div class="mx-[calc(3rem_*_2)]"></div>
         """)
     }
 
